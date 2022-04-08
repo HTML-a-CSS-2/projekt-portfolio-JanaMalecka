@@ -1,0 +1,8 @@
+@mixin important-text {
+  color: $tertiary-color;
+  font-size: $font-size-md;
+  font-weight: bold;
+}
+@mixin display-grid {
+  display: grid;
+}
