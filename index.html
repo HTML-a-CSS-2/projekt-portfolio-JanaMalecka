@@ -11,23 +11,43 @@
     <section id="homepage">
       <div class="hero">
         <header>
-          <div class="navbar">
-            <div class="logo">W</div>
-            <ul class="menu">
-              <li class="menu__item">Shop</li>
-              <li class="menu__item">Visit</li>
-              <li class="menu__item">Events</li>
-              <li class="menu__item">Culinary</li>
-              <li class="menu__item">Stories</li>
-              <li class="menu__item">Values</li>
+          <nav class="navbar">
+            <a href="index.html" class="navbar__logo">W</a>
+
+            <ul class="navbar__menu">
+              <li class="navbar__menu-item">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="visit.html" class="nav-link">Visit</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="events.html" class="nav-link">Events</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="culinary.html" class="nav-link">Culinary</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="stories.html" class="nav-link">Stories</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="values.html" class="nav-link">Values</a>
+              </li>
             </ul>
-          </div>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
         </header>
         <div class="container container__intro">
           <div class="heading">More than wine</div>
-          <button class="btn btn--left">Chardonnay</button>
-          <button class="btn btn--middle">Chardonnay</button>
-          <button class="btn btn--right">Chardonnay</button>
+          <div class="hero__btn">
+            <button class="btn btn--left">Chardonnay</button>
+            <button class="btn btn--middle">Chardonnay</button>
+            <button class="btn btn--right">Chardonnay</button>
+          </div>
         </div>
       </div>
       <div class="container container__intro-about">
@@ -70,5 +90,6 @@
         </p>
       </div>
     </section>
+    <script src="main.js"></script>
   </body>
 </html>
