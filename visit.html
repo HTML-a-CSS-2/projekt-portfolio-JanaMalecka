@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winery</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section id="visitPage">
+      
+        <header>
+          
+          <div class="hero">
+
+          <nav class="navbar">
+            <a href="index.html" class="navbar__logo">WineryM</a>
+
+            <ul class="navbar__menu">
+              <li class="navbar__menu-item">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="visit.html" class="nav-link">Visit</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="events.html" class="nav-link">Events</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="culinary.html" class="nav-link">Culinary</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="stories.html" class="nav-link">Stories</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="values.html" class="nav-link">Values</a>
+              </li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+
+          <div class="container__gallery">
+            <img class=""src="vineyard.jpg" alt="picture of vineyard" srcset="
+            glassesOfWine.jpg 400w,
+            wineCellar.jpg 800w,
+            vineyard.jpg 1600w
+            ">
+         
+          <picture>
+            <source srcset="glassesOfWine.jpg"
+            media="(min-width: 600px)"/>
+            <source srcset="vineyard.jpg"
+            media="(min-width: 1000px)" />
+            <img src="wineCellar.jpg" />
+          </picture>
+        </div>
+      </header>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

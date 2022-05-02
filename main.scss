@@ -4,6 +4,7 @@
 @import 'menu';
 @import 'config';
 @import 'mixin';
+@import 'visit';
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -81,6 +82,7 @@ a {
 .container {
   color: $primary-color;
   padding: 3rem;
+  padding-top: 8rem;
   font-size: $font-size-normal;
 
   &__intro {
@@ -91,4 +93,10 @@ a {
   .container {
     font-size: $font-size-sm;
   }
+}
+.heading {
+  padding-left: 1.2rem;
+}
+p {
+  margin-bottom: 1rem;
 }
