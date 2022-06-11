@@ -5,6 +5,9 @@
 @import 'config';
 @import 'mixin';
 @import 'visit';
+@import 'btn';
+@import 'shop';
+@import 'events';
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -12,8 +15,8 @@ html {
   min-height: 100%;
 }
 body {
-  background: $tertiary-color;
-  color: rgb(21, 24, 21);
+  background: $secondary-color;
+  color: $primary-color;
 }
 
 * {
