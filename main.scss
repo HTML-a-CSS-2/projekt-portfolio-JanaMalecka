@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import 'homepage';
+@import 'menu';
+@import 'config';
+@import 'mixin';
+@import 'visit';
+@import 'btn';
+@import 'shop';
+@import 'events';
+
+html {
+  font-family: 'Roboto', sans-serif;
+  min-width: 100%;
+  min-height: 100%;
+}
+body {
+  background: $secondary-color;
+  color: $primary-color;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hero {
+  height: 50vh;
+  width: 100vw;
+}
+header {
+  background-color: transparent;
+}
+li {
+  list-style: none;
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+//hero
+#herovideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  #herovideo {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #herovideo {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #herovideo {
+    display: none;
+  }
+  #homepage {
+    background: url('poster.png');
+    background-size: cover;
+  }
+}
+@media (min-width: 768px) {
+  .hero__btn {
+    @include display-grid();
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 'btn--left btn--middle btn--right . . ';
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+}
+
+// intro
+.container {
+  color: $primary-color;
+  padding: 3rem;
+  padding-top: 8rem;
+  font-size: $font-size-normal;
+
+  &__intro {
+    @include important-text();
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    font-size: $font-size-sm;
+  }
+}
+.heading {
+  padding-left: 1.2rem;
+}
+p {
+  margin-bottom: 1rem;
+}

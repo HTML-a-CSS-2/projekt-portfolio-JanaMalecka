@@ -1,0 +1,121 @@
+@import 'mixin';
+@import 'config';
+
+.navbar {
+  @include display-grid();
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'logoGrid menuGrid';
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  min-height: 70px;
+  font-size: $font-size-normal;
+
+  &__logo {
+    font-family: 'Beau Rivage', cursive;
+    font-size: $font-size-md;
+    grid-area: logoGrid;
+  }
+}
+
+.navbar__menu {
+  display: flex;
+  position: fixed;
+  left: -100%;
+  top: 90px;
+  gap: 0;
+  flex-direction: column;
+  background-color: $primary-color;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s;
+  grid-area: menuGrid;
+}
+
+.nav-link {
+  transition: 0.5s ease;
+  color: $secondary-color;
+
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+.hamburger {
+  display: block;
+  justify-self: end;
+  cursor: pointer;
+  grid-area: menuGrid;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.navbar__menu-item {
+  margin: 16px 0;
+}
+.navbar__menu.active {
+  left: 0;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: $primary-color;
+}
+.hero__btn {
+  @include display-grid();
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  grid-template-areas:
+    'btn--left'
+    'btn--middle'
+    'btn--right';
+  align-items: center;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-link {
+    color: $primary-color;
+  }
+  .navbar {
+    font-size: $font-size-sm;
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      position: unset;
+      background-color: transparent;
+      padding-right: 2rem;
+    }
+
+    &__logo {
+      font-size: $font-size-lg;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    font-size: $font-size-md;
+
+    &__logo {
+      font-size: $font-size-lg;
+    }
+  }
+}
